@@ -3,7 +3,6 @@ import Logo from "./logo";
 import Search from "./search";
 import UserMenu from "./userMenu";
 
-
 export default function Navbar() {
   return (
     <div className="fixed w-full bg-white z-10 shadow-sm">

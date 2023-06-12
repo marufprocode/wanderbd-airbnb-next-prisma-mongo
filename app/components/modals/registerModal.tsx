@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { toast } from "react-hot-toast";
 import useRegisterModal from '@/app/hooks/useRegisterModal'
 import { useForm, FieldValues, SubmitHandler } from 'react-hook-form'
 import axios from 'axios'
@@ -22,7 +23,7 @@ export default function RegisterModal() {
     axios
       .post('api/register', data)
       .then((response) => registerModal.onClose())
-      .catch((error) => console.error(error))
+      .catch((error) => toast.error("something went wrong, try again"))
       .finally(() => setisLoading(false))
   }
 
